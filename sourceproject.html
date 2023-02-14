@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .main {
+            /* display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      position: relative; */
+            /*width: 218px;*/
+        }
+
+        label {
+            font-family: "Arial";
+            font-size: 16px;
+            color: #0f3661;
+        }
+
+        ::placeholder {
+            color:  #000000;
+            /* #f88f8f; */
+            /* //#DEDEDF */
+        }
+
+        input[type=submit] {
+            color: #fff;
+            background-color: #f82d2d;
+            height: 36px;
+        }
+
+        input[type=reset] {
+            color: #fff;
+            background-color: #f82d2d;
+            height: 36px;
+        }
+
+        .new {
+            display: inline;
+        }
+    </style>
+    <script type="text/javascript">
+        var language_
+        $(document).ready(function () {
+        //     document.getElementById("rounded").onclick = function() {
+            
+         //} 
+       
+            let params = new URLSearchParams(window.location.search)
+            // console.log(params.get('language'))
+            // language_ = params.get('language')
+           
+                document.getElementById('firstname').placeholder = "First name";
+                document.getElementById('lastname').placeholder = "Last name";
+                document.getElementById('email').placeholder = "Email id";
+                document.getElementById('phone').placeholder = "Mobile Number";
+                document.getElementById('sample').placeholder = "Sample Prepartion Sales";
+                document.getElementById('institution').placeholder = "Institution";
+                document.getElementById('organization').placeholder = "Organization";
+                // document.getElementById('cars').placeholder = "What car";
+             //   document.getElementById('otherRrganization').placeholder = "Organization Type";
+             //  document.getElementById("organization").style.display = "none";
+                document.getElementById("otherOrganization").style.visibility = 'hidden';
+                document.getElementById('question').placeholder = "What is your Question about";
+    
+        })
+        $(function () {
+            $("#submit").click(function () {
+                console.log("--CLICKED ON SUBMIT---")
+                var a, b, c,d,e,f,g,h,i;
+                var other = 'false';
+                alert(other +" the other is false")
+                var firstname = $("#firstname").val()
+                if (firstname == "") {
+                    document.getElementById('firstname_error').style.display = 'inline';
+                    // if (language_ == 'ar') {
+                    //     document.getElementById('firstname_error').innerHTML = "الرجاء إدخال الاسم الأول";
+                    // }
+                    //else {
+                        document.getElementById('firstname_error').innerHTML = "Please enter the first name";
+                    //}
+                    return false;
+                } else {
+                    a = 'ok'
+                    document.getElementById('firstname_error').innerHTML = "";
+                    var lastname = $("#lastname").val()
+                    if (lastname == "") {
+                        document.getElementById('lastname_error').style.display = 'inline';
+                        // if (language_ == 'ar') {
+                        //     document.getElementById('lastname_error').innerHTML = "الرجاء إدخال الاسم الأخير";
+                        // } else {
+                            document.getElementById('lastname_error').innerHTML = "Please enter the last name";
+                        //}
+                        return false;
+                    } else {
+                        b = 'ok'
+                        document.getElementById('lastname_error').innerHTML = "";
+                        var email = $("#email").val()
+                        if (email == "") {
+                            document.getElementById('email_error').style.display = 'inline';
+                            // if (language_ == 'ar') {
+                            //     document.getElementById('email_error').innerHTML = "الرجاء إدخال معرف البريد الإلكتروني";
+                            // } else {
+                                document.getElementById('email_error').innerHTML = "Please enter the email id";
+                            //}
+                            return false;
+                        } else {
+                            var re = /[A-Za-z\d]+([-._+]?[A-Za-z\d]+)*@[A-Za-z\d]+(-?[A-Za-z\d])*([.][A-Za-z\d]{2,})+/;
+                            var x = re.test(email);
+                            console.log(x)
+                            if (!x) {
+                                console.log("---em")
+                                document.getElementById('email_error').style.display = 'inline';
+                                // if (language_ == 'ar') {
+                                //     document.getElementById('email_error').innerHTML = "الرجاء إدخال معرف بريد إلكتروني صالح";
+                                // } else {
+                                    document.getElementById('email_error').innerHTML = "Please enter a valid email id";
+                              //  }
+                                return false;
+                            } else {
+                                c = 'ok'
+                                document.getElementById('email_error').innerHTML = "";
+                                var mobile = $("#phone").val()
+                                // var re = /^(?:\+971|00971|0|91|9)?(?:50|51|52|55|56|2|3|4|6|7|9)\d{7}$/;
+                                // var re = /^([+|0-9]{5})$/;
+                                var check = re.test(mobile);
+                                if (mobile == "") {
+                                    console.log(mobile, "mobile");
+                                    document.getElementById('phone_error').style.display = 'inline';
+                                    // if (language_ == 'ar') {
+                                    //     document.getElementById('phone_error').innerHTML = "الرجاء إدخال رقم جوال صحيح";
+                                    // } else {
+                                        document.getElementById('phone_error').innerHTML = "Please enter a valid mobile number";
+                                  //  }
+                                    return false;
+                                } else {
+                                    d = 'ok'
+                                    document.getElementById('phone_error').innerHTML = "";
+                                    var sample= $("#sample").val()
+                    if (sample == "") {
+                        document.getElementById('sample_error').style.display = 'inline';
+                        // if (language_ == 'ar') {
+                        //     document.getElementById('lastname_error').innerHTML = "الرجاء إدخال الاسم الأخير";
+                        // } else {
+                            document.getElementById('sample_error').innerHTML = "Please enter a Sample Prepration Sales";
+                        //}
+                        return false;
+                    } else {
+                        e = 'ok'
+                        document.getElementById('sample_error').innerHTML = "";
+
+
+                        var institution= $("#institution").val()
+                    if (institution == "") {
+                        document.getElementById('institution_error').style.display = 'inline';
+                        // if (language_ == 'ar') {
+                        //     document.getElementById('lastname_error').innerreHTML = "الرجاء إدخال الاسم الأخير";
+                        // } else {
+                            document.getElementById('institution_error').innerHTML = "Please enter a valid Institustion";
+                        //}
+                        return false;
+                    } else {
+                         f = 'ok'
+                        document.getElementById('institution_error').innerHTML = "";
+
+
+
+                        var organization= $("#organization").val()
+                        alert(organization+ "here we are")
+                    if (organization == "") {
+                        document.getElementById('organization_error').style.display = 'inline';
+                        // if (language_ == 'ar') {
+                        //     document.getElementById('lastname_error').innerHTML = "الرجاء إدخال الاسم الأخير";
+                        // } else {
+                            document.getElementById('organization_error').innerHTML = "Please enter a valid Organization";
+                        //}
+                        return false;
+                    } 
+                    else if(organization == "Other" || organization == "other"){
+                        //document.getElementById("otherOrganization").style.visibility = 'visible';
+                        // alert(organization + " this is organizzation ")
+                        other == 'true'; 
+                        //    alert(other + " if other is true or false ")
+                    }
+        //             function showElement() {
+        //     element = document.querySelector('.container');
+        //     element.style.visibility = 'visible';
+        // }
+        //element.style.visibility = 'hidden';
+                        else {
+                         g = 'ok'
+                        document.getElementById('organization_error').innerHTML = "";
+                        }
+
+                        // alert(organization +" line :: 203 organization value")
+if(organization == 'Other' || organization == "other"){
+    // alert(organization +" the other is true")
+    // alert(" here in other organization")
+    var otherOrganization= $("#otherOrganization").val()
+    alert(otherOrganization +" line::208 ")
+                    if (otherOrganization == "") {
+                       
+                        document.getElementById('otherOrganization_error').style.display = 'inline';
+                        // if (language_ == 'ar') {
+                        //     document.getElementById('lastname_error').innerHTML = "الرجاء إدخال الاسم الأخير";
+                        // } else {
+                            document.getElementById('otherOrganization_error').innerHTML = "Please enter a valid Organization";
+                        //}
+                        return false;
+                    } 
+                    else {
+                      //  alert(otherOrganization +"otherOrganization line::210 ")
+                         h = 'ok'
+                        document.getElementById('otherOrganization_error').innerHTML = "";
+                        // alert("")
+
+  }
+                   
+        //             function showElement() {
+        //     element = document.querySelector('.container');
+        //     element.style.visibility = 'visible';
+        // }
+        //element.style.visibility = 'hidden';
+}
+                        // else {
+                        //  h = 'ok'
+                        // document.getElementById('otherOrganization_error').innerHTML = "";
+                        // alert("")
+
+//  }
+//alert(otherOrganization +"before question line::239 ")
+ var question= $("#question").val()
+                    if (institution == "") {
+                        document.getElementById('question_error').style.display = 'inline';
+                        // if (language_ == 'ar') {
+                        //     document.getElementById('lastname_error').innerHTML = "الرجاء إدخال الاسم الأخير";
+                        // } else {
+                            document.getElementById('question_error').innerHTML = "Please enter a Question";
+                        //}
+                        return false;
+                    } else {
+                    //    alert(question +"in else questions line::250")
+                    //    alert(question +"in else questions line::250")
+                         i = 'ok'
+                    //     alert(question +"in else questions line::250")
+                       //  document.getElementById('question_error').innerHTML = "";
+                        //document.getElementById('question_error').innerHTML = "";
+                    //    alert(question +"in else questions line::250")
+                        // let status= document.getElementById('organization').value; 
+                    //    alert(organization +'final statment for logs')
+                    //    if(organization == 'Other' || organization == "other"){
+             //  alert('final statment for logs')
+            
+            
+                                    if (a == "ok" && b == "ok" && c == "ok" && d == "ok" && e == "ok" && f == "ok"  && g == "ok" && h == "ok" && i == "ok") {
+                                        // clearTimeout(x)
+                                        console.log('First name -', $("#firstname").val())
+                                    //    alert('line :: 266')
+                                        console.log('Last name -', $("#lastname").val())
+                                    //    alert('fline :: 267')
+                                        console.log('Email -', $("#email").val())
+                                    //    alert('line :: 268')
+                                        console.log('Phone -', $("#phone").val())
+                                    //    alert('line :: 269')
+                                        console.log('sample -', $("#sample").val())
+                                    //    alert('line :: 270')
+                                        console.log('institution -', $("#institution").val())
+                                    //    alert('line :: 271')
+                                        console.log('organization -', $("#organization").val())
+                                    //    alert('line :: 272')
+                                        console.log('otherOrganization -', $("#otherOrganization").val())
+                                    //    alert('line :: 273')
+                                        console.log('question -', $("#question").val())
+                                    //    alert('line :: 274')
+
+
+                                        let queryback = new URLSearchParams(window.location.search).get('query')
+                                        window.parent.postMessage(JSON.stringify({
+                                            event_code: 'ym-client-event',
+                                            data: JSON.stringify({
+                                                event: {
+                                                    code: "userdetails",
+                                                    data: {
+                                                        firstname: $("#firstname").val(),
+                                                        lastname: $("#lastname").val(),
+                                                        email: $("#email").val(),
+                                                        phone: $("#phone").val(),
+                                                        sample :$("#sample").val(),
+                                                        institution:$("#institution").val(),
+                                                        organization : $("#organization").val(),
+                                                        otherOrganization : $("#otherOrganization").val(),
+                                                        question:$("#question").val()
+                                                    }
+                                                }
+                                            })
+                                        }), '*');
+                                        $('#custom :input').attr('disabled', 'disabled');
+                                        $('#custom').fadeTo("slow", 0.15, function () {
+                                            $(this).find(':input').attr('disabled', 'disabled');
+                                            $(this).find('label').css('cursor', 'default');
+                                        });
+                                             $('#add').append("Thank You");
+                                            console.log("all value filled")
+                                      //  }
+                                    
+                                }
+                                
+                                else if(a == "ok" && b == "ok" && c == "ok" && d == "ok" && e == "ok" && f == "ok"  && g == "ok"  && i == "ok"){
+                                 //   alert('here in else if statment')
+                                    console.log('First name -', $("#firstname").val())
+                                   // alert('line :: 266')
+                                        console.log('Last name -', $("#lastname").val())
+                                     //   alert('fline :: 267')
+                                        console.log('Email -', $("#email").val())
+                                      //  alert('fline :: 268')
+                                        console.log('Phone -', $("#phone").val())
+                                      //  alert('fline :: 269')
+                                        console.log('sample -', $("#sample").val())
+                                      //  alert('fline :: 270')
+                                        console.log('institution -', $("#institution").val())
+                                      //  alert('fline :: 271')
+                                        console.log('organization -', $("#organization").val())
+                                      //  alert('fline :: 272')
+                                        console.log('question -', $("#question").val())
+                                      //  alert('fline :: 273')
+
+                                    //     alert('First name -', $("#firstname").val())
+                                    //    alert('Last name -', $("#lastname").val())
+                                    //    alert('Email -', $("#email").val())
+                                    //    alert('Phone -', $("#phone").val())
+                                    //    alert('sample -', $("#sample").val())
+                                    //    alert('institution -', $("#institution").val())
+                                    //    alert('organization -', $("#organization").val())
+                                      
+                                    //    alert('question -', $("#question").val())
+
+
+
+
+                                        let queryback = new URLSearchParams(window.location.search).get('query')
+                                        window.parent.postMessage(JSON.stringify({
+                                            event_code: 'ym-client-event',
+                                            data: JSON.stringify({
+                                                event: {
+                                                    code: "userdetails",
+                                                    data: {
+                                                        firstname: $("#firstname").val(),
+                                                        lastname: $("#lastname").val(),
+                                                        email: $("#email").val(),
+                                                        phone: $("#phone").val(),
+                                                        sample :$("#sample").val(),
+                                                        institution:$("#institution").val(),
+                                                        organization : $("#organization").val(),
+            
+                                                        question:$("#question").val()
+                                                    }
+                                                }
+                                            })
+                                        }), '*');
+                                        $('#custom :input').attr('disabled', 'disabled');
+                                        $('#custom').fadeTo("slow", 0.15, function () {
+                                            $(this).find(':input').attr('disabled', 'disabled');
+                                            $(this).find('label').css('cursor', 'default');
+                                        });
+                                        
+                                           $('#add').append("Thank You");
+                                            console.log("all value filled excpet other")
+                                        
+                                    }
+                                    else{
+                                        console.log("---else--")
+                                    }
+                               // }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+                }
+            })
+        })
+    </script>
+</head>
+
+<body style="background-color: #f6fdfd;">
+    <div class="main">
+        <br>
+        <br>
+        <div class="container" style="padding: 0;" id="custom">
+            <form class="main" style="width: 200px">
+                <input type="text" id="firstname" placeholder="" required name="firstname" translate="no" lang=""
+                    size="23">
+                <br><label id='firstname_error'></label>
+                <br>
+                <input type="text" id="lastname" placeholder="" required name="firstname" translate="no" lang=""
+                    size="23">
+                <br><label id='lastname_error'></label>
+                <br>
+                <center><strong>
+                        <ul id="add"></ul>
+                    </strong></center>
+                <input type="email" id="email" placeholder="" required name="email" translate="no" lang="" size="23">
+                <br><label id='email_error'></label>
+                <br>
+
+                <!--suggestion start  -->
+                <input type="tel" id="phone" placeholder=""  name="phone" translate="no" lang=""
+                    size="23">
+                <datalist id="programId">
+                </datalist>
+                <!--suggestion end  -->
+
+                <br><label id='phone_error'></label>
+                <br>
+
+                <input type="tel" id="sample" placeholder="" list="sampleid"   name="sample"  translate="no" lang=""
+                size="23">
+                 <datalist id="sampleid">
+                </datalist>
+                     
+  <!-- <select id="selectMe">
+  <option value="student">Student</option>
+  <option value="staff">Staff</option>
+  <option value="guest">Guest</option>
+</select> -->
+                
+            <br><label id='sample_error'></label>
+            <br>
+
+            <input type="text" id="institution" placeholder=""  required name="institution" translate="no" lang=""
+            size="23">
+        <br><label id='institution_error'></label>
+        <br>    
+
+        <input type="tel" id="organization" placeholder=""   list="programId" onchange="changestatus()" required name="organization" translate="no" lang=""
+        size="23">
+       <datalist id="programId">
+        </datalist>
+    <br><label id='organization_error'></label>
+    <br>
+   
+<input type="text" id="otherOrganization" placeholder="Organization Type"  name="otherOrganization" translate="no" lang=""
+size="23">
+<br><label id='otherOrganization_error'></label>
+<br>
+
+<!-- <div class="question" style="width: 200px"> -->
+    <input type="text" id="question" placeholder="" required name="question" translate="no" lang=""
+    style="height: 100px; width: 500px">
+    <br><label id='otherOrganization_error'></label>
+    <br>
+<!-- </div> -->
+                <!-- srinivas c r start -->
+                <!-- <div>
+                    <div class="new">
+                        <select id="country" style="width: 60px;height: 25px ;" onchange="country_code()">
+                            <option value="">--select--</option>
+                        </select>
+                    </div>
+                    <div class="new">
+                        <input type="tel" style="width: 125px;margin-left: 10px;" id="phone" placeholder="phone number"
+                            onkeyup="phncode()" translate="no" lang="" size="12"><br>
+                    </div>
+                </div>  -->
+                <!-- srinivas c r ends -->
+                <input type="submit" value="Submit" id="submit" translate="no" lang="">
+                <input type="reset" value="Reset" id="reset" translate="no" lang="">
+            </form>
+        </div>
+    </div>
+    <script>
+        let organization = {
+            "organizations": [
+        {
+           "code" :"Biotechnology"            
+        },
+        {
+            "code": "Medical/Clinical Diagnostics"  
+            
+        },
+        {
+            "code" : "Pharmaceutical"
+            
+        },
+        {
+            "code": "Diagnostic Manufacturing"
+           
+        },
+        {
+            "code": "Government"
+          
+        },
+        {
+            "code": "Industrial"
+        },
+        {
+            "code": "Animal Veterinary Science Food & Beverage" 
+        },
+        {
+            "code": "Environmental Distributor Dealer Sourcing"
+            
+        },
+        {
+            "code": "University College"
+        
+        },
+        {
+            "code": "Other"    
+        }
+   
+            ]
+        }
+
+        let sample = {
+            "samples": [
+            {
+           "code" :"Protein & Cell Analysis"            
+        },
+        {
+            "code": "Cell Biology"  
+            
+        }
+            ]
+        }
+
+ function changestatus(){
+  
+   // alert(document.getElementById('organization').value);
+            let status= document.getElementById('organization').value; 
+            if(status == 'other' || status == 'Other'){
+                document.getElementById("otherOrganization").style.visibility = 'visible';
+                
+            
+            }
+            else{
+               
+                document.getElementById("otherOrganization").style.visibility = 'hidden';
+            }
+            
+        }
+        // send data suggestion 
+        for (let index = 0; index < organization.organizations.length; index++) {
+            let code = organization.organizations[index].code
+            // console.log(code);
+           // let counnryName = country.countries[index].name
+            let ele = document.getElementById('programId');
+            ele.innerHTML = ele.innerHTML + '<option value="' + organization.organizations[index].code + '" >' + organization.organizations[index].code+ '</option>';
+        }
+        for (let index = 0; index < sample.samples.length; index++) {
+            let code = sample.samples[index].code
+            // console.log(code);
+           // let counnryName = country.countries[index].name
+            let ele = document.getElementById('sampleid');
+            ele.innerHTML = ele.innerHTML + '<option value="' + sample.samples[index].code + '" >' + sample.samples[index].code+ '</option>';
+        }
+       
+        // console.log(country, "country"); 
+        // for (let index = 0; index < country.countries.length; index++) {
+        //     let code = country.countries[index].code
+        //     let counnryName = country.countries[index].name
+        //     let ele = document.getElementById('country');
+        //     ele.innerHTML = ele.innerHTML + '<option value="' + country.countries[index].code + '" >' + country.countries[index].code + '</option>';
+        // }
+
+        // function country_code() {
+        //     let countryCode = document.getElementById("country").value;
+        //     console.log("country_code", countryCode);
+        //     document.getElementById("phone").value = countryCode
+        // }
+        // function phncode() {
+        //     let phoneno = document.getElementById("phone").value
+        //     if (phoneno.startsWith("+")) {
+        //         phoneno = phoneno 
+        //     } else {
+        //         phoneno = "+" + phoneno
+        //     }
+        //     console.log("phone_number", phoneno);
+        //     var result = country.countries.filter(outcode => outcode.code === phoneno);
+        //     console.log(result, "country");
+
+        //     result.forEach(val => {
+        //         let newres = val.code
+        //         console.log(val.code);
+        //         document.getElementById("country").value = newres
+        //     })
+
+        // } 
+    </script>
+</body>
+
+</html>
