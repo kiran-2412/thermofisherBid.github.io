@@ -16,30 +16,39 @@
       justify-content: center;
       padding: 0 20px;
       position: relative; */
+      /* left:80px; top:20px; */
             width: 2218px;
+            /* border-style: dotted; */
+            font-family: "Verdana";
+            border-radius: 25px; 
         }
 
         label {
-            font-family: "Arial";
-            font-size: 16px;
-            color: #0f3661;
+            /* font-family: "Arial"; */
+            font-size: 10px;
+            font-family: "Verdana";
+            color: #3548ec;
         }
 
         ::placeholder {
-            color:  #000000;
+            /* text-rendering: optimizeLegibility;
+            line-height: 26px; */
+            color:  #0000008c;
+            font-family: "Verdana";
             /* #f88f8f; */
             /* //#DEDEDF */
         }
 
         input[type=submit] {
             color: #fff;
-            background-color: #f82d2d;
+            /* background-color: #f82d2d; */
+            background-color: #ff0000;
             height: 36px;
         }
 
         input[type=reset] {
             color: #fff;
-            background-color: #f82d2d;
+            background-color: #ff0000;
             height: 36px;
         }
 
@@ -62,7 +71,7 @@
                 document.getElementById('lastname').placeholder = "Last name";
                 document.getElementById('email').placeholder = "Email id";
                 document.getElementById('phone').placeholder = "Mobile Number";
-                document.getElementById('sample').placeholder = "Sample Prepartion Sales";
+                document.getElementById('sample').placeholder = "Product";
                 document.getElementById('institution').placeholder = "Institution";
                 document.getElementById('organization').placeholder = "Organization";
                 // document.getElementById('cars').placeholder = "What car";
@@ -77,7 +86,7 @@
                 console.log("--CLICKED ON SUBMIT---")
                 var a, b, c,d,e,f,g,h,i;
                 var other = 'false';
-                alert(other +" the other is false")
+                // alert(other +" the other is false")
                 var firstname = $("#firstname").val()
                 if (firstname == "") {
                     document.getElementById('firstname_error').style.display = 'inline';
@@ -85,7 +94,7 @@
                     //     document.getElementById('firstname_error').innerHTML = "الرجاء إدخال الاسم الأول";
                     // }
                     //else {
-                        document.getElementById('firstname_error').innerHTML = "Please enter the first name";
+                        document.getElementById('firstname_error').innerHTML = "Please enter your first name";
                     //}
                     return false;
                 } else {
@@ -97,7 +106,7 @@
                         // if (language_ == 'ar') {
                         //     document.getElementById('lastname_error').innerHTML = "الرجاء إدخال الاسم الأخير";
                         // } else {
-                            document.getElementById('lastname_error').innerHTML = "Please enter the last name";
+                            document.getElementById('lastname_error').innerHTML = "Please enter your last name";
                         //}
                         return false;
                     } else {
@@ -109,7 +118,7 @@
                             // if (language_ == 'ar') {
                             //     document.getElementById('email_error').innerHTML = "الرجاء إدخال معرف البريد الإلكتروني";
                             // } else {
-                                document.getElementById('email_error').innerHTML = "Please enter the email id";
+                                document.getElementById('email_error').innerHTML = "Please enter your email id";
                             //}
                             return false;
                         } else {
@@ -150,7 +159,7 @@
                         // if (language_ == 'ar') {
                         //     document.getElementById('lastname_error').innerHTML = "الرجاء إدخال الاسم الأخير";
                         // } else {
-                            document.getElementById('sample_error').innerHTML = "Please enter a Sample Prepration Sales";
+                            document.getElementById('sample_error').innerHTML = "Please enter a Product";
                         //}
                         return false;
                     } else {
@@ -174,7 +183,7 @@
 
 
                         var organization= $("#organization").val()
-                        alert(organization+ "here we are")
+                        // alert(organization+ "here we are")
                     if (organization == "") {
                         document.getElementById('organization_error').style.display = 'inline';
                         // if (language_ == 'ar') {
@@ -205,7 +214,7 @@ if(organization == 'Other' || organization == "other"){
     // alert(organization +" the other is true")
     // alert(" here in other organization")
     var otherOrganization= $("#otherOrganization").val()
-    alert(otherOrganization +" line::208 ")
+    // alert(otherOrganization +" line::208 ")
                     if (otherOrganization == "") {
                        
                         document.getElementById('otherOrganization_error').style.display = 'inline';
@@ -262,23 +271,23 @@ if(organization == 'Other' || organization == "other"){
             
                                     if (a == "ok" && b == "ok" && c == "ok" && d == "ok" && e == "ok" && f == "ok"  && g == "ok" && h == "ok" && i == "ok") {
                                         // clearTimeout(x)
-                                        console.log('First name -', $("#firstname").val())
-                                    //    alert('line :: 266')
-                                        console.log('Last name -', $("#lastname").val())
-                                    //    alert('fline :: 267')
-                                        console.log('Email -', $("#email").val())
-                                    //    alert('line :: 268')
-                                        console.log('Phone -', $("#phone").val())
-                                    //    alert('line :: 269')
-                                        console.log('sample -', $("#sample").val())
-                                    //    alert('line :: 270')
-                                        console.log('institution -', $("#institution").val())
-                                    //    alert('line :: 271')
-                                        console.log('organization -', $("#organization").val())
-                                    //    alert('line :: 272')
-                                        console.log('otherOrganization -', $("#otherOrganization").val())
-                                    //    alert('line :: 273')
-                                        console.log('question -', $("#question").val())
+                                    //     console.log('First name -', $("#firstname").val())
+                                    // //    alert('line :: 266')
+                                    //     console.log('Last name -', $("#lastname").val())
+                                    // //    alert('fline :: 267')
+                                    //     console.log('Email -', $("#email").val())
+                                    // //    alert('line :: 268')
+                                    //     console.log('Phone -', $("#phone").val())
+                                    // //    alert('line :: 269')
+                                    //     console.log('sample -', $("#sample").val())
+                                    // //    alert('line :: 270')
+                                    //     console.log('institution -', $("#institution").val())
+                                    // //    alert('line :: 271')
+                                    //     console.log('organization -', $("#organization").val())
+                                    // //    alert('line :: 272')
+                                    //     console.log('otherOrganization -', $("#otherOrganization").val())
+                                    // //    alert('line :: 273')
+                                    //     console.log('question -', $("#question").val())
                                     //    alert('line :: 274')
 
 
@@ -315,22 +324,22 @@ if(organization == 'Other' || organization == "other"){
                                 
                                 else if(a == "ok" && b == "ok" && c == "ok" && d == "ok" && e == "ok" && f == "ok"  && g == "ok"  && i == "ok"){
                                  //   alert('here in else if statment')
-                                    console.log('First name -', $("#firstname").val())
-                                   // alert('line :: 266')
-                                        console.log('Last name -', $("#lastname").val())
-                                     //   alert('fline :: 267')
-                                        console.log('Email -', $("#email").val())
-                                      //  alert('fline :: 268')
-                                        console.log('Phone -', $("#phone").val())
-                                      //  alert('fline :: 269')
-                                        console.log('sample -', $("#sample").val())
-                                      //  alert('fline :: 270')
-                                        console.log('institution -', $("#institution").val())
-                                      //  alert('fline :: 271')
-                                        console.log('organization -', $("#organization").val())
-                                      //  alert('fline :: 272')
-                                        console.log('question -', $("#question").val())
-                                      //  alert('fline :: 273')
+                                //     console.log('First name -', $("#firstname").val())
+                                //    // alert('line :: 266')
+                                //         console.log('Last name -', $("#lastname").val())
+                                //      //   alert('fline :: 267')
+                                //         console.log('Email -', $("#email").val())
+                                //       //  alert('fline :: 268')
+                                //         console.log('Phone -', $("#phone").val())
+                                //       //  alert('fline :: 269')
+                                //         console.log('sample -', $("#sample").val())
+                                //       //  alert('fline :: 270')
+                                //         console.log('institution -', $("#institution").val())
+                                //       //  alert('fline :: 271')
+                                //         console.log('organization -', $("#organization").val())
+                                //       //  alert('fline :: 272')
+                                //         console.log('question -', $("#question").val())
+                                //       //  alert('fline :: 273')
 
                                     //     alert('First name -', $("#firstname").val())
                                     //    alert('Last name -', $("#lastname").val())
@@ -393,23 +402,22 @@ if(organization == 'Other' || organization == "other"){
     </script>
 </head>
 
-<body style="background-color: #f6fdfd;">
+<body  style="background-color: #ffffff;">
     <div class="main">
         <br>
         <br>
-        <div class="container" style="padding: 0;" id="custom">
+        <div class="container" style="padding: 0;" left:80px; top:20px; id="custom">
             <form class="main" style="width: 200px">
-                <input type="text" id="firstname" placeholder="" required name="firstname" translate="no" lang=""
-                    size="23">
+                <label for="html"  font color="#000000">Thermofisher</label><br>
+                <input type="text" id="firstname" placeholder="" required name="firstname" translate="no"   lang=""
+                    size="23" >
                 <br><label id='firstname_error'></label>
                 <br>
                 <input type="text" id="lastname" placeholder="" required name="firstname" translate="no" lang=""
                     size="23">
                 <br><label id='lastname_error'></label>
                 <br>
-                <center><strong>
-                        <ul id="add"></ul>
-                    </strong></center>
+                <center><strong><ul id="add"></ul></strong></center>
                 <input type="email" id="email" placeholder="" required name="email" translate="no" lang="" size="23">
                 <br><label id='email_error'></label>
                 <br>
