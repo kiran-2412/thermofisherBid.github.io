@@ -67,18 +67,18 @@
             // console.log(params.get('language'))
             // language_ = params.get('language')
            
-                document.getElementById('firstname').placeholder = "First name";
-                document.getElementById('lastname').placeholder = "Last name";
-                document.getElementById('email').placeholder = "Email id";
-                document.getElementById('phone').placeholder = "Mobile Number";
-                document.getElementById('sample').placeholder = "Product";
-                document.getElementById('institution').placeholder = "Institution";
-                document.getElementById('organization').placeholder = "Organization";
+                document.getElementById('firstname').placeholder = "               First name";
+                document.getElementById('lastname').placeholder = "               Last name";
+                document.getElementById('email').placeholder = "               Email id";
+                document.getElementById('phone').placeholder = "               Mobile Number";
+                document.getElementById('sample').placeholder = "               Product";
+                document.getElementById('institution').placeholder = "               Institution";
+                document.getElementById('organization').placeholder = "               Organization";
                 // document.getElementById('cars').placeholder = "What car";
              //   document.getElementById('otherRrganization').placeholder = "Organization Type";
              //  document.getElementById("organization").style.display = "none";
                 document.getElementById("otherOrganization").style.visibility = 'hidden';
-                document.getElementById('question').placeholder = "What is your Question about";
+                document.getElementById('question').placeholder = "  What is your Question about";
     
         })
         $(function () {
@@ -402,13 +402,29 @@ if(organization == 'Other' || organization == "other"){
     </script>
 </head>
 
-<body  style="background-color: #ffffff;">
+<!-- <body  style="background-color: #ffffff;">
     <div class="main">
         <br>
         <br>
         <div class="container" style="padding: 0;" left:80px; top:20px; id="custom">
             <form class="main" style="width: 200px">
                 <label for="html"  font color="#000000">Thermofisher</label><br>
+                 -->
+                
+                 <body  style="width:50px;" >
+    <div class="main">
+        
+        <!-- padding: 10px;
+    padding-top: 0px;style="padding: 0;max-lenght: 50;  height: 20%; padding: 0; -->
+        <div class="container"  id="custom">
+            <form style="width:50px; " class="main">
+                <!-- <marquee direction="right" behavior="alternate" style="background:blue;" >  
+                    Any text  
+                    </marquee>   -->
+           <div style="background-color: #797A7D; width:250px; padding-left:15px;padding-bottom:15px; padding-top:15px;">
+                
+                
+                
                 <input type="text" id="firstname" placeholder="" required name="firstname" translate="no"   lang=""
                     size="23" >
                 <br><label id='firstname_error'></label>
@@ -458,14 +474,14 @@ if(organization == 'Other' || organization == "other"){
     <br><label id='organization_error'></label>
     <br>
    
-<input type="text" id="otherOrganization" placeholder="Organization Type"  name="otherOrganization" translate="no" lang=""
+<input type="text" id="otherOrganization" placeholder="               Organization Type"  name="otherOrganization" translate="no" lang=""
 size="23">
 <br><label id='otherOrganization_error'></label>
 <br>
 
 <!-- <div class="question" style="width: 200px"> -->
     <input type="text" id="question" placeholder="" required name="question" translate="no" lang=""
-    style="height: 100px; width: 500px">
+    style="height: 60px; width: 220px">
     <br><label id='otherOrganization_error'></label>
     <br>
 <!-- </div> -->
@@ -484,6 +500,7 @@ size="23">
                 <!-- srinivas c r ends -->
                 <input type="submit" value="Submit" id="submit" translate="no" lang="">
                 <input type="reset" value="Reset" id="reset" translate="no" lang="">
+                </div>
             </form>
         </div>
     </div>
