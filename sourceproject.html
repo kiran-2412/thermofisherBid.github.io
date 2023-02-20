@@ -17,10 +17,14 @@
       padding: 0 20px;
       position: relative; */
       /* left:80px; top:20px; */
-/*             width: 2218px; */
-            /*border-style: dotted;*/
+            /* width: 2218px;
+            /* border-style: dotted; */
+            /* font-family: "Verdana";
+            border-radius: 25px;  */
+            text-align: center;
             font-family: "Verdana";
             border-radius: 25px; 
+        
         }
 
         label {
@@ -51,6 +55,7 @@
             background-color: #ff0000;
             height: 36px;
         }
+
         .new {
             display: inline;
         }
@@ -66,13 +71,13 @@
             // console.log(params.get('language'))
             // language_ = params.get('language')
            
-                document.getElementById('firstname').placeholder = "               First name";
-                document.getElementById('lastname').placeholder = "               Last name";
-                document.getElementById('email').placeholder = "               Email id";
-                document.getElementById('phone').placeholder = "               Mobile Number";
-                document.getElementById('sample').placeholder = "               Product";
-                document.getElementById('institution').placeholder = "               Institution";
-                document.getElementById('organization').placeholder = "               Organization";
+                document.getElementById('firstname').placeholder = "First name";
+                document.getElementById('lastname').placeholder = "Last name";
+                document.getElementById('email').placeholder = "Email id";
+                document.getElementById('phone').placeholder = "Mobile Number";
+                document.getElementById('sample').placeholder = "Product";
+                document.getElementById('institution').placeholder = "Institution";
+                document.getElementById('organization').placeholder = "Organization";
                 // document.getElementById('cars').placeholder = "What car";
              //   document.getElementById('otherRrganization').placeholder = "Organization Type";
              //  document.getElementById("organization").style.display = "none";
@@ -85,7 +90,7 @@
                 console.log("--CLICKED ON SUBMIT---")
                 var a, b, c,d,e,f,g,h,i;
                 var other = 'false';
-                // alert(other +" the other is false")
+                alert(other +" the other is false")
                 var firstname = $("#firstname").val()
                 if (firstname == "") {
                     document.getElementById('firstname_error').style.display = 'inline';
@@ -182,7 +187,7 @@
 
 
                         var organization= $("#organization").val()
-                        // alert(organization+ "here we are")
+                        alert(organization+ "here we are")
                     if (organization == "") {
                         document.getElementById('organization_error').style.display = 'inline';
                         // if (language_ == 'ar') {
@@ -213,7 +218,7 @@ if(organization == 'Other' || organization == "other"){
     // alert(organization +" the other is true")
     // alert(" here in other organization")
     var otherOrganization= $("#otherOrganization").val()
-    // alert(otherOrganization +" line::208 ")
+    alert(otherOrganization +" line::208 ")
                     if (otherOrganization == "") {
                        
                         document.getElementById('otherOrganization_error').style.display = 'inline';
@@ -406,40 +411,41 @@ if(organization == 'Other' || organization == "other"){
         <br>
         <br>
         <div class="container" style="padding: 0;" left:80px; top:20px; id="custom">
-            <form class="main" style="width: 200px">
-                <label for="html"  font color="#000000">Thermofisher</label><br>
-                 -->
-                
-                 <body  style="width:50px;" >
-    <div class="main">
-        
-        <!-- padding: 10px;
-    padding-top: 0px;style="padding: 0;max-lenght: 50;  height: 20%; padding: 0; -->
-        <div class="container"  id="custom">
-            <form style="width:50px; " class="main">
-                <!-- <marquee direction="right" behavior="alternate" style="background:blue;" >  
-                    Any text  
-                    </marquee>   -->
-<!--            <div style="background-color: #797A7D; width:250px; padding-left:15px;padding-bottom:15px; padding-top:15px;"> -->
-                <div style="background-color: #797A7D; width:250px; padding-left:25px;padding-bottom:10px; padding-top:10px;">
-                
-                
+            <form class="main" style="width: 200px"> -->
+
+                <!-- <label for="html"  font color="#000000">Thermofisher</label><br> -->
+                <body style="width:0px;" >
+                    <div class="main">
+                        
+                        <!-- padding: 10px;
+                    padding-top: 0px;style="padding: 0;max-lenght: 50;  height: 20%; padding: 0; -->
+                        <div class="container"  id="custom">
+                            <form style="width:0px; " class="main">
+                                <!-- <marquee direction="right" behavior="alternate" style="background:blue;" >  
+                                    Any text  
+                                    </marquee>   -->
+                           <div style="background-color: #797A7D; width:310px; padding-left:25px;padding-bottom:10px; padding-top:10px;padding-right:25px;">
+<!-- ; -->
+
+
                 <input type="text" id="firstname" placeholder="" required name="firstname" translate="no"   lang=""
-                    size="23" >
+                    size="18" >
+                    
+                    <!--style="width: 80px;" -->
                 <br><label id='firstname_error'></label>
                 <br>
                 <input type="text" id="lastname" placeholder="" required name="firstname" translate="no" lang=""
-                    size="23">
+                    size="18">
                 <br><label id='lastname_error'></label>
                 <br>
                 <center><strong><ul id="add"></ul></strong></center>
-                <input type="email" id="email" placeholder="" required name="email" translate="no" lang="" size="23">
+                <input type="email" id="email" placeholder="" required name="email" translate="no" lang="" size="18">
                 <br><label id='email_error'></label>
                 <br>
 
                 <!--suggestion start  -->
                 <input type="tel" id="phone" placeholder=""  name="phone" translate="no" lang=""
-                    size="23">
+                    size="18">
                 <datalist id="programId">
                 </datalist>
                 <!--suggestion end  -->
@@ -448,7 +454,7 @@ if(organization == 'Other' || organization == "other"){
                 <br>
 
                 <input type="tel" id="sample" placeholder="" list="sampleid"   name="sample"  translate="no" lang=""
-                size="23">
+                size="18">
                  <datalist id="sampleid">
                 </datalist>
                      
@@ -462,19 +468,19 @@ if(organization == 'Other' || organization == "other"){
             <br>
 
             <input type="text" id="institution" placeholder=""  required name="institution" translate="no" lang=""
-            size="23">
+            size="18">
         <br><label id='institution_error'></label>
         <br>    
 
         <input type="tel" id="organization" placeholder=""   list="programId" onchange="changestatus()" required name="organization" translate="no" lang=""
-        size="23">
+        size="18">
        <datalist id="programId">
         </datalist>
     <br><label id='organization_error'></label>
     <br>
    
-<input type="text" id="otherOrganization" placeholder="               Organization Type"  name="otherOrganization" translate="no" lang=""
-size="23">
+<input type="text" id="otherOrganization" placeholder="Organization Type"  name="otherOrganization" translate="no" lang=""
+size="18">
 <br><label id='otherOrganization_error'></label>
 <br>
 
@@ -499,7 +505,7 @@ size="23">
                 <!-- srinivas c r ends -->
                 <input type="submit" value="Submit" id="submit" translate="no" lang="">
                 <input type="reset" value="Reset" id="reset" translate="no" lang="">
-                </div>
+            </div>
             </form>
         </div>
     </div>
