@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=Z_BmfsKLDShnem7PHvD9UJ6o7W2I5QvRBYLA0CLDFoPnM9O3xiO3I-vd6Pvhz9o0nP1Wl1K5pI6cyoQbd_gH5T4sFiUJ1FERW0iDejhWcYrYLwAZ9Mh0H7xWOtgU3NgrkhgOpgxMMYNx2V5ZKiv9AljbjYTbJvrJadeVUlghrT1SnYoe659nC3PVasI_d4LuYSm4xmbC_9jgKYcYBpZ3BRnxEe7F0-XS_RtnzDU6W1_wswJ1A37pabtJSbkoOEn5dWhcK8MswtjtqMUysSiLr4MAkwnty5Cn3ge8sWsmSe49wmif0BSLFJf0B6pw9OortAuBBD9uNSHPzXHL_xlwczkbfoaRYWQWZcsoJvCjNIfmHgikIBC4dONqbBBd9S7COyluor0w1fEWNoNskZcXcM11ooaCsMg2394GKYorrRXZDMWvCqHDtlRdGx-WoCkUzQRGP7fynfnPOGyjp1AHMLkwBbG-dqTzLK5AwKNa-WYB9F4DobE7qQsurwsGK7ySk44Qv3ZyaIKo7yFkzqUJuWZYOqVYALC2a9HImsYjSQl3ztB3vky1w7Pnem1Ja893qxpf12mW2U3MQrOQ0JaWMYEQjcsbPLs0i_X64ea9uaxWhcKmdxyICjSnzqaI6ZlGWIIyKhtCpTX6nDcCqHezS1tD_kMQFc74zaqRv7oApKYbe3IkNXB5S8QD_Tfi4_kSLsgk4l3SDodmL8PVNL0Hiz1f5wOiulAccHfBYVFqHwb99pV1y_qFOtQBYYTjmvuSGc7mLsNOo3cf-ah_1yH4aqFANL0eu2kFEFkRW2BNy-7hL_WoXXyRZd-6HF_OPZYj5DtqpRddYk711y2S8uPfwqPEb39RKv8B5bj1T3SJIfDR10vvYX-KiWALRE9TzG206Ov-IXi5hYTZOjNCFLy2KPuHR6QmHrlbeteJjFdqN9FztW_PY2gJKFslETAOMY1XSzAlwVT4-61u3RrN5h_h12Ez2lupneGcHJyWpiT3-DuPRBIN8Ogn2IA0kkUNsUwzY2M1wabaMJYrj4CxTEauUnnaktBfkGvPs7_PiCDrnLXosARcav-xSdeQCFfSPty2M0mDnqGbhSZQ0YOjOUvsOqg2Etb72ciTktnbzkK_Ee404DMfesK_IoMIVW3wGPlmeVoBC0BJ5PNngrPQblckmPHGZ1BcNilq7Zi8iQCFRbXNZyMzqYQ2FMy5Z7kcRQ37fyydqG4c1cCzN-IhYhouh4gPvAAs1cUHLc58UWwh2BZBZiL43QJGnlnMEsr5YxxrGT4_Y2Xwe75wen4i5z8O9--cI3v4zXqtAd_9kZa_Y_guEM47fQY3dn4yfk87dTdlvNaakJB4KxaQ2HZy2_rMyT_Cu0LAvpMqR5T8olLVf5-zdlbdxjJRvQH1_egRbyUdi38hIqAbUt1mJRhip9Ex57YxdRmc4w5NtPy0Fzio8xcKaS1h0UODssVliL47D1NwxZLJ_x78us0v4VSrdBcC6Ug5E9q03nOPdVXosIM0Gn6Z6BzGiqiybHdQnrK7SgVnBDBtTQMiQwfzaGl_m6SAkam94xW9rSWlTtQ0Qvdie1g_SuAwVkr349CWRLGN3IpJWS-eVnI9dvqpulMesVGxXhTG97mNM1HNYAB8lGVmUdQiPbRi8VAj30fXqCZKAbgD" nonce="f1e9389039ecf743e082c0fddafe94ca" charset="UTF-8"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css">
         .main {
@@ -23,15 +23,15 @@
             border-radius: 25px;  */
             text-align: left;
             font-family: "Roboto";
-            border-radius: 25px; 
+           
         
         }
 
         label {
             /* font-family: "Arial"; */
-            font-size: 12px;
+            font-size: 11px;
             font-family: "Roboto";
-            color: #080808;
+            color: #ff0000;
         }
 
         ::placeholder {
@@ -80,7 +80,7 @@
                 document.getElementById('organization').placeholder = "Organization";
               
                 document.getElementById("otherOrganization").style.visibility = 'hidden';
-                document.getElementById('question').placeholder = "  What is your Question about";
+                document.getElementById('question').placeholder = "Type your question";
     
         })
         $(function () {
@@ -92,7 +92,7 @@
                 if (firstname == "") {
                     document.getElementById('firstname_error').style.display = 'inline';
                   
-                        document.getElementById('firstname_error').innerHTML = "Please enter your first name";
+                        document.getElementById('firstname_error').innerHTML = "Enter first name";
                    
                     return false;
                 } else {
@@ -102,7 +102,7 @@
                     if (lastname == "") {
                         document.getElementById('lastname_error').style.display = 'inline';
                       
-                            document.getElementById('lastname_error').innerHTML = "Please enter your last name";
+                            document.getElementById('lastname_error').innerHTML = "Enter last name";
                         
                         return false;
                     } else {
@@ -112,7 +112,7 @@
                         if (email == "") {
                             document.getElementById('email_error').style.display = 'inline';
                             
-                                document.getElementById('email_error').innerHTML = "Please enter your email id";
+                                document.getElementById('email_error').innerHTML = "Enter email id";
                             
                             return false;
                         } else {
@@ -123,7 +123,7 @@
                                 console.log("---em")
                                 document.getElementById('email_error').style.display = 'inline';
                                
-                                    document.getElementById('email_error').innerHTML = "Please enter a valid email id";
+                                    document.getElementById('email_error').innerHTML = "Enter a valid email id";
                               
                                 return false;
                             } else {
@@ -137,7 +137,7 @@
                                     console.log(mobile, "mobile");
                                     document.getElementById('phone_error').style.display = 'inline';
                                     
-                                        document.getElementById('phone_error').innerHTML = "Please enter a valid mobile number";
+                                        document.getElementById('phone_error').innerHTML = "Enter a valid mobile number";
                 
                                     return false;
                                 } else {
@@ -147,7 +147,7 @@
                     if (sample == "") {
                         document.getElementById('sample_error').style.display = 'inline';
                        
-                            document.getElementById('sample_error').innerHTML = "Please enter a Product";
+                            document.getElementById('sample_error').innerHTML = "Enter a product";
                         
                         return false;
                     } else {
@@ -159,7 +159,7 @@
                     if (institution == "") {
                         document.getElementById('institution_error').style.display = 'inline';
                        
-                            document.getElementById('institution_error').innerHTML = "Please enter a valid Institustion";
+                            document.getElementById('institution_error').innerHTML = "Enter a valid institustion";
                     
                         return false;
                     } else {
@@ -173,7 +173,7 @@
                     if (organization == "") {
                         document.getElementById('organization_error').style.display = 'inline';
                        
-                            document.getElementById('organization_error').innerHTML = "Please enter a valid Organization";
+                            document.getElementById('organization_error').innerHTML = "Enter a valid organization";
                     
                         return false;
                     } 
@@ -197,7 +197,7 @@ if(organization == 'Other' || organization == "other"){
                        
                         document.getElementById('otherOrganization_error').style.display = 'inline';
                         
-                            document.getElementById('otherOrganization_error').innerHTML = "Please enter a valid Organization";
+                            document.getElementById('otherOrganization_error').innerHTML = "Enter a valid Organization";
                         
                         return false;
                     } 
@@ -226,7 +226,7 @@ if(organization == 'Other' || organization == "other"){
                     if (institution == "") {
                         document.getElementById('question_error').style.display = 'inline';
                       
-                            document.getElementById('question_error').innerHTML = "Please enter a Question";
+                            document.getElementById('question_error').innerHTML = "Enter a valid question";
                         //}
                         return false;
                     } else {
@@ -382,60 +382,67 @@ if(organization == 'Other' || organization == "other"){
 <!-- #797A7D; ; -->
 
 
-                <input type="text" id="firstname" placeholder="" required name="firstname" translate="no"   lang=""
-                    size="20" >
-                    
-                    <!--style="width: 80px;" -->
-                <br><label id='firstname_error'></label>
-                <br>
+                <div style="padding-bottom:3px;">
+				<input type="text" id="firstname" placeholder="" required name="firstname" translate="no"   lang=""
+                    size="25" style="height:20px; font-size:12px;font-family:Roboto;">
+                  
+                <label id='firstname_error'></label>
+                
+				</div>
+				<div style="padding-top:3px;padding-bottom:3px;">
                 <input type="text" id="lastname" placeholder="" required name="firstname" translate="no" lang=""
-                    size="20">
-                <br><label id='lastname_error'></label>
-                <br>
+                    size="25" style="height:20px; font-size:12px;font-family:Roboto;">
+                <label id='lastname_error'></label>
+                
+				</div>
                 <!-- <center><strong><ul id="add"></ul></strong></center> -->
-                <input type="email" id="email" placeholder="" required name="email" translate="no" lang="" size="20">
-                <br><label id='email_error'></label>
-                <br>
+                <div style="padding-top:3px;padding-bottom:3px;">
+				<input type="email" id="email" placeholder="" required name="email" translate="no" lang="" size="25" style="height:20px; font-size:12px;font-family:Roboto;">
+                <label id='email_error'></label>
+                </div>
 
                 <!--suggestion start  -->
+				<div style="padding-top:3px;padding-bottom:3px;">
                 <input type="tel" id="phone" placeholder=""  name="phone" translate="no" lang=""
-                    size="20">
+                    size="25" style="height:20px; font-size:12px;font-family:Roboto;">
                 <datalist id="programId">
                 </datalist>
                 <!--suggestion end  -->
 
-                <br><label id='phone_error'></label>
-                <br>
-
+                <label id='phone_error'></label>
+                </div>
+<div style="padding-top:3px;padding-bottom:3px;">
                 <input type="tel" id="sample" placeholder="" list="sampleid"   name="sample"  translate="no" lang=""
-                size="20">
+                size="25" style="height:20px; font-size:12px;font-family:Roboto;">
                  <datalist id="sampleid">
                 </datalist>
                      
                 
-            <br><label id='sample_error'></label>
-            <br>
+            <label id='sample_error'></label>
+            </div>
 
+<div style="padding-top:3px;padding-bottom:3px;">
             <input type="text" id="institution" placeholder=""  required name="institution" translate="no" lang=""
-            size="20">
-        <br><label id='institution_error'></label>
-        <br>    
+            size="25" style="height:20px; font-size:12px;font-family:Roboto;">
+        <label id='institution_error'></label>
+        </div>    
 
+<div style="padding-top:3px;padding-bottom:3px;">
         <input type="tel" id="organization" placeholder=""   list="programId" onchange="changestatus()" required name="organization" translate="no" lang=""
-        size="20">
+        size="25" style="height:20px; font-size:12px;font-family:Roboto;">
        <datalist id="programId">
         </datalist>
-    <br><label id='organization_error'></label>
-    <br>
-   
+   <label id='organization_error'></label>
+   <div style="padding-top:3px;">
 <input type="text" id="otherOrganization" placeholder="Organization Type"  name="otherOrganization" translate="no" lang=""
-size="20">
-<br><label id='otherOrganization_error'></label>
-<br>
+size="25" style="height:20px; font-size:12px;font-family:Roboto;">
+<label id='otherOrganization_error'></label>
+</div>
+</div>
 
 <!-- <div class="question" style="width: 200px"> -->
     <input type="text" id="question" placeholder="" required name="question" translate="no" lang=""
-    style="height: 60px; width: 180px">
+    style="height: 40px; width: 184px;font-size:12px;font-family:Roboto;">
     <br><label id='otherOrganization_error'></label>
     <br>
 <!-- </div> -->
