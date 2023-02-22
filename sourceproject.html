@@ -132,8 +132,17 @@
                                 var mobile = $("#phone").val()
                                 // var re = /^(?:\+971|00971|0|91|9)?(?:50|51|52|55|56|2|3|4|6|7|9)\d{7}$/;
                                 // var re = /^([+|0-9]{5})$/;
+				var re = /^\d*[.]?\d*$/;
+                                // var re = /^[0-9]*$/;
                                 var check = re.test(mobile);
-                                if (mobile == "") {
+                                if(!check){
+                                    document.getElementById('phone_error').style.display = 'inline';
+                                    
+                                    document.getElementById('phone_error').innerHTML = "Enter a valid mobile number";
+            
+                                return false;
+                                }
+                                else if (mobile == "") {
                                     console.log(mobile, "mobile");
                                     document.getElementById('phone_error').style.display = 'inline';
                                     
