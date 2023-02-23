@@ -249,7 +249,23 @@ if(organization == 'Other' || organization == "other"){
 //                          alert('line :: 266')
                          //ok b ok NaN c ok ok ok undefined ok ok 
                                     if (a == "ok" && b == "ok" && c == "ok" && d == "ok" && e == "ok" && f == "ok"  && h == "ok" && i == "ok") {
-                                      //  clearTimeout(x)  && g == "ok"
+                                      
+					    
+					    
+					    localStorage.setItem("firstname", $("#firstname").val());
+                                      localStorage.setItem("lastname", $("#lastname").val());
+                                      localStorage.setItem("email",$("#email").val());
+                                      localStorage.setItem("mobileno", $("#phone").val());
+                                      localStorage.setItem("sample",$("#sample").val());
+                                      localStorage.setItem("institution",$("#institution").val());
+                                      localStorage.setItem("organization", $("#organization").val());
+                                      localStorage.setItem("question", $("#question").val());
+					    
+					    
+					    
+					    
+					    
+					    //  clearTimeout(x)  && g == "ok"
 //                                       alert('line :: 266')
 //                                         console.log('First name -', $("#firstname").val())
 //                                        alert('line :: 266')
@@ -303,7 +319,20 @@ if(organization == 'Other' || organization == "other"){
                                 }
                                 
                                 else if(a == "ok" && b == "ok" && c == "ok" && d == "ok" && e == "ok" && f == "ok"  && g == "ok"  && i == "ok"){
-//                                    alert('here in else if statment')
+
+					
+					localStorage.setItem("firstname", $("#firstname").val());
+                                      localStorage.setItem("lastname", $("#lastname").val());
+                                      localStorage.setItem("email",$("#email").val());
+                                      localStorage.setItem("mobileno", $("#phone").val());
+                                      localStorage.setItem("sample",$("#sample").val());
+                                      localStorage.setItem("institution",$("#institution").val());
+                                      localStorage.setItem("organization", $("#organization").val());
+                                      localStorage.setItem("question", $("#question").val());
+					
+					
+					
+					//                                    alert('here in else if statment')
 //                                     console.log('First name -', $("#firstname").val())
 //                                    // alert('line :: 266')
 //                                         console.log('Last name -', $("#lastname").val())
@@ -476,6 +505,9 @@ size="28" style="height:25px; font-size:14px;font-family:Roboto;">
                 <!-- srinivas c r ends -->
                 <input type="submit" value="Submit" id="submit" translate="no" lang="">
                 <input type="reset" value="Reset" id="reset" translate="no" lang="">
+				   <center><strong>
+                    <ul id="add"></ul>
+                </strong></center>
                 <!-- <center><strong><ul id="add"></ul></strong></center> -->
             </div>
             </form>
@@ -567,6 +599,74 @@ size="28" style="height:25px; font-size:14px;font-family:Roboto;">
             ele.innerHTML = ele.innerHTML + '<option value="' + sample.samples[index].code + '" >' + sample.samples[index].code+ '</option>';
         }
     </script>
+			<script>
+				 window.onload = function() {
+console.log("onload")
+let firstname;
+let lastname;
+let email;
+let phoneno;
+let sample;
+let institution;
+let organization;
+let otherOrganization;
+let question;
+
+if(localStorage.getItem("firstname") && localStorage.getItem("lastname") && localStorage.getItem("email")&& localStorage.getItem("mobileno") && localStorage.getItem("sample") && localStorage.getItem("institution")&& localStorage.getItem("organization") && localStorage.getItem("question")){
+    firstname = localStorage.getItem("firstname")
+    lastname = localStorage.getItem("lastname")
+
+    email = localStorage.getItem("email")
+    mobileno     = localStorage.getItem("mobileno")
+    sample = localStorage.getItem("sample")
+    institution = localStorage.getItem("institution")
+    organization = localStorage.getItem("organization")
+    otherOrganization = localStorage.getItem("otherOrganization");
+    question = localStorage.getItem("question");
+
+
+
+
+    document.getElementById('firstname').placeholder = firstname;
+    document.getElementById('lastname').placeholder = lastname;
+                document.getElementById('email').placeholder = email;
+                document.getElementById('phone').placeholder = mobileno;
+                document.getElementById('sample').placeholder = sample;
+                document.getElementById('institution').placeholder = institution;
+                document.getElementById('organization').placeholder = organization;
+              
+                document.getElementById("otherOrganization").style.visibility = 'hidden';
+                document.getElementById('question').placeholder = question;
+
+
+                $('#custom :input').attr('disabled', 'disabled');
+                                        $('#custom').fadeTo("slow", 0.15, function () {
+                                            $(this).find(':input').attr('disabled', 'disabled');
+                                            $(this).find('label').css('cursor', 'default');
+                                        });
+                                        
+                                           $('#add').append("Thank You");
+                                            console.log("all value filled excpet other")
+
+
+
+
+}
+else{
+    document.getElementById('firstname').placeholder = "First Name";
+    document.getElementById('lastname').placeholder = "Last name";
+                document.getElementById('email').placeholder = "Email id";
+                document.getElementById('phone').placeholder = "Mobile Number";
+                document.getElementById('sample').placeholder = "Product";
+                document.getElementById('institution').placeholder = "Institution";
+                document.getElementById('organization').placeholder = "Organization";
+              
+                document.getElementById("otherOrganization").style.visibility = 'hidden';
+                document.getElementById('question').placeholder = "Type your question";
+
+}
+				 }
+				</script>
 </body>
 
 </html>
