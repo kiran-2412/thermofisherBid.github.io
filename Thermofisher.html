@@ -234,10 +234,10 @@ if(organization == 'Other' || organization == "other"){
 //  }
 //alert(otherOrganization +"before question line::239 ")
  var question= $("#question").val()
-                    if (institution == "") {
+                    if (question == "") {
                         document.getElementById('question_error').style.display = 'inline';
                       
-                            document.getElementById('question_error').innerHTML = "Enter a valid question";
+                            document.getElementById('question_error').innerHTML = "Enter a valid input";
                         //}
                         return false;
                     } else {
@@ -458,7 +458,7 @@ size="28" style="height:25px; font-size:14px;font-family:Roboto;">
     style="height: 60px; width: 235px; font-size:14px; font-family:Roboto;">
     <!--  -->
     <!--  style="height: 60px; width: 180px"> -->
-    <br><label id='otherOrganization_error'></label>
+    <br><label id='question_error'></label>
     <br>
 <!-- </div> -->
                 <!-- srinivas c r start -->
